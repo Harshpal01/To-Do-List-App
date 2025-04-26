@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* General body setup */
+body {
+  background-color: #F8FFF8;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.title .secondary {
+  color: #E5C15E;
+}
+
+.title .primary {
+  color: #20412E;
+}
+
+/* Form input + button side by side */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 250px;
+}
+
+button.btn-primary {
+  background-color: #20412E;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+button.btn-primary:hover {
+  background-color: #163020;
+}
+
+/* Tasks list */
+.card {
+  padding: 2em;
+}
+
+.table> :not(caption)>*>* {
+  vertical-align: middle;
+}
+
+/* Trash button */
+button.btn-danger {
+  background-color: red;
+  border: none;
+}
+
+button.btn-danger:hover {
+  background-color: darkred;
+}
+
+/* Make Card bigger */
+.card {
+  padding: 2em;
+  min-height: 300px;
+ 
+}
+
+/* Set specific width for Task and Action columns */
+th:nth-child(1),
+td:nth-child(1) {
+  width: 250px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 120px;
+}
+
+button.btn-danger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 1.2rem;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+}
+
+button.btn-danger:hover {
+  background-color: darkred;
+}
+body,
+html {
+  overflow-x: hidden;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"] {
+    width: 80%;
+
+  }
+
+  button.btn-primary {
+    width: 60%;
+    margin-left: 0;
+  }
+
+  .card {
+    padding: 1em;
+  }
+}
